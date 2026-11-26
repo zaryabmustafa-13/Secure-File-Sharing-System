@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure File Sharing Portal</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <main class="container">
+        <header>
+            <p class="eyebrow">INTERNEE.PK • SECURITY PROJECT</p>
+            <h1>Secure File Sharing</h1>
+            <p>Encrypt. Upload. Share. Recover.</p>
+        </header>
+
+        <section class="panel">
+            <h2>Secure file upload</h2>
+
+            <label for="uploadFile">Choose a file</label>
+            <input type="file" id="uploadFile">
+
+            <label for="uploadPassword">Encryption password</label>
+            <input type="password" id="uploadPassword"
+                   placeholder="Create a strong password">
+
+            <button id="uploadButton">Encrypt & Upload</button>
+
+            <div id="uploadResult" class="result"></div>
+        </section>
+
+        <section class="panel">
+            <h2>Download and recover</h2>
+
+            <label for="objectKey">Encrypted file reference</label>
+            <input type="text" id="objectKey"
+                   placeholder="encrypted/....enc">
+
+            <label for="downloadPassword">Decryption password</label>
+            <input type="password" id="downloadPassword"
+                   placeholder="Enter the original password">
+
+            <label for="downloadFilename">Original filename</label>
+            <input type="text" id="downloadFilename"
+                   placeholder="example.pdf">
+
+            <button id="downloadButton">Download & Decrypt</button>
+
+            <div id="downloadResult" class="result"></div>
+        </section>
+
+        <footer>
+            Files are encrypted in your browser before cloud upload.
+            Keep your password and file reference private.
+        </footer>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
